@@ -1,0 +1,14 @@
+{
+  "name": "mike-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal portfolio website for Mikhail Daffa Herdiansah.",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
