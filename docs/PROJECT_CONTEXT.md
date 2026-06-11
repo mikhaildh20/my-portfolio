@@ -3,7 +3,7 @@
 ## Identity
 
 Name: Mikhail Daffa Herdiansah  
-Preferred name: Mike  
+Nickname: Mike, used only as a secondary mention  
 LinkedIn: https://www.linkedin.com/in/mikhaildhns
 
 ## LinkedIn-Synced Public Positioning
@@ -16,11 +16,11 @@ Public bio snippet shows:
 
 > Hello! I'm Mikhail Daffa Herdiansah, an Informatics Management student at Politeknik Astra (Class of 2023). I have a strong passion for Information ...
 
-Use this as the source of truth until Mike provides a full LinkedIn export/CV.
+Use this as the source of truth until Mikhail Daffa Herdiansah provides a full LinkedIn export/CV.
 
 ## Current Positioning
 
-Mike is an Informatics Management student at Politeknik Astra, class of 2023. His current public portfolio positioning is:
+Mikhail Daffa Herdiansah is an Informatics Management student at Politeknik Astra, class of 2023. His current public portfolio positioning is:
 
 > Full-Stack Developer Enthusiast | IT Student
 
@@ -38,7 +38,7 @@ Do not include the final project / Tugas Akhir in this version.
 
 ## Personality / Brand
 
-Mike's portfolio should feel:
+Mikhail Daffa Herdiansah's portfolio should feel:
 
 - ambitious but grounded;
 - technical but still readable;

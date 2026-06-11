@@ -1,6 +1,6 @@
-# Mike Portfolio
+# Mikhail Daffa Herdiansah Portfolio
 
-Personal portfolio website for **Mikhail Daffa Herdiansah** / **Mike**.
+Personal portfolio website for **Mikhail Daffa Herdiansah**.
 
 Built as the first mini project on the PlugPlay VPS setup.
 
@@ -72,7 +72,7 @@ http://43.159.62.171/portfolio/
 
 ## Next Improvements
 
-- Replace placeholder contact text with real email if Mike wants it public.
+- Replace placeholder contact text with a real email if Mikhail Daffa Herdiansah wants it public.
 - Add GitHub profile link.
 - Add project screenshots.
 - Add downloadable CV.
