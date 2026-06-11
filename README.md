@@ -52,6 +52,56 @@ Health check:
 http://127.0.0.1:3200/health
 ```
 
+## PostgreSQL Content Settings
+
+Dynamic portfolio content is stored in PostgreSQL:
+
+- Database: `my_portfolio`
+- Table: `mst_detail_settings`
+- Main editable columns:
+  - `setting_key`
+  - `setting_value`
+  - `setting_group`
+  - `description`
+
+Schema and seed files:
+
+```txt
+database/schema.sql
+database/seed.sql
+```
+
+Apply them with:
+
+```bash
+psql -d my_portfolio -f database/schema.sql
+psql -d my_portfolio -f database/seed.sql
+```
+
+Example content update:
+
+```sql
+update mst_detail_settings
+set setting_value = 'Turning my ideas into practical web applications.',
+    updated_at = now()
+where setting_key = 'hero_title';
+```
+
+Example photo path update:
+
+```sql
+update mst_detail_settings
+set setting_value = 'assets/avatar.jpg',
+    updated_at = now()
+where setting_key = 'avatar_path';
+```
+
+The frontend loads settings from:
+
+```txt
+/api/settings
+```
+
 ## Deploy on PlugPlay Server
 
 Create service:

@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260611-assets2" />
+  <link rel="stylesheet" href="styles.css?v=20260611-db1" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Mikhail Daffa Herdiansah portfolio home">
       <span class="brand-mark">MD</span>
-      <span>Mikhail</span>
+      <span data-setting="nav_brand">Mikhail</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#about">About</a>
@@ -24,7 +24,7 @@
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="header-cta" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer">GitHub</a>
+    <a class="header-cta" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer" data-setting="header_cta_label" data-setting-href="header_cta_url">GitHub</a>
   </header>
 
   <main id="top">
@@ -32,27 +32,27 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="status-dot"></span>
-          Full-Stack Developer Enthusiast · IT Student
+          <span data-setting="hero_badge">Full-Stack Developer Enthusiast · IT Student</span>
         </div>
-        <h1>Turning my IT curiosity into practical web projects.</h1>
-        <p class="hero-copy">
-          Hello, I'm <strong>Mikhail Daffa Herdiansah</strong>, also known as Mike. I am an Informatics Management student at Politeknik Astra, class of 2023, with a strong passion for Information Technology and full-stack web development.
+        <h1 data-setting="hero_title">Turning my IT curiosity into practical web projects.</h1>
+        <p class="hero-copy" data-setting="hero_intro">
+          Hello, I'm Mikhail Daffa Herdiansah, also known as Mike. I am an Informatics Management student at Politeknik Astra, class of 2023, with a strong passion for Information Technology and full-stack web development.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#work">View my direction</a>
-          <a class="btn secondary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer">Preview CV</a>
+          <a class="btn primary" href="#work" data-setting="hero_primary_label">View my direction</a>
+          <a class="btn secondary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer" data-setting="hero_secondary_label" data-setting-href="hero_secondary_url">Preview CV</a>
         </div>
       </div>
 
       <aside class="profile-card" aria-label="Profile photo placeholder">
         <div class="portrait-frame">
-          <img src="assets/avatar.jpg" alt="Mikhail Daffa Herdiansah portrait" data-fallback-initials="MD" />
+          <img src="assets/avatar.jpg" alt="Mikhail Daffa Herdiansah portrait" data-setting-src="avatar_path" data-fallback-initials="MD" />
           <div class="portrait-fallback" aria-hidden="true">MD</div>
         </div>
         <div class="profile-card-copy">
           <p class="eyebrow">Profile Asset</p>
           <h2>Mikhail Daffa Herdiansah</h2>
-          <p>Place my photo at <code>public/assets/avatar.jpg</code> to replace this reserved profile image area.</p>
+          <p data-setting="profile_asset_note">Place my photo at <code>public/assets/avatar.jpg</code> to replace this reserved profile image area.</p>
         </div>
       </aside>
 
@@ -75,13 +75,13 @@
     <section id="about" class="section-shell split-section">
       <div>
         <p class="eyebrow">About</p>
-        <h2>I am building strong foundations in IT.</h2>
+        <h2 data-setting="about_title">I am building strong foundations in IT.</h2>
       </div>
       <div class="content-card large-copy">
-        <p>
+        <p data-setting="about_paragraph_1">
           I am an Informatics Management student at Politeknik Astra. My current LinkedIn positioning is Full-Stack Developer Enthusiast and IT Student.
         </p>
-        <p>
+        <p data-setting="about_paragraph_2">
           I focus on learning how to build useful web-based systems, understand software development workflows, and improve through practical projects that can become real portfolio evidence.
         </p>
       </div>
@@ -90,28 +90,28 @@
     <section id="focus" class="section-shell">
       <div class="section-heading">
         <p class="eyebrow">Focus Areas</p>
-        <h2>The skill direction I am developing.</h2>
+        <h2 data-setting="focus_title">The skill direction I am developing.</h2>
       </div>
       <div class="focus-grid compact-grid">
         <article class="focus-card accent-blue">
           <span>01</span>
-          <h3>Frontend Development</h3>
-          <p>I am learning to build clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.</p>
+          <h3 data-setting="focus_1_title">Frontend Development</h3>
+          <p data-setting="focus_1_body">I am learning to build clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.</p>
         </article>
         <article class="focus-card accent-pink">
           <span>02</span>
-          <h3>Backend Development</h3>
-          <p>I am developing my understanding of server-side logic, routing, APIs, data handling, and application structure.</p>
+          <h3 data-setting="focus_2_title">Backend Development</h3>
+          <p data-setting="focus_2_body">I am developing my understanding of server-side logic, routing, APIs, data handling, and application structure.</p>
         </article>
         <article class="focus-card accent-red">
           <span>03</span>
-          <h3>Software Engineering</h3>
-          <p>I want to improve how I plan, organize, document, version, and maintain software projects.</p>
+          <h3 data-setting="focus_3_title">Software Engineering</h3>
+          <p data-setting="focus_3_body">I want to improve how I plan, organize, document, version, and maintain software projects.</p>
         </article>
         <article class="focus-card">
           <span>04</span>
-          <h3>Information Technology</h3>
-          <p>I am growing my technical literacy across systems, databases, development tools, and real-world IT workflows.</p>
+          <h3 data-setting="focus_4_title">Information Technology</h3>
+          <p data-setting="focus_4_body">I am growing my technical literacy across systems, databases, development tools, and real-world IT workflows.</p>
         </article>
       </div>
     </section>
@@ -119,8 +119,8 @@
     <section id="work" class="section-shell project-section">
       <div class="section-heading centered">
         <p class="eyebrow">Portfolio Direction</p>
-        <h2>I use this portfolio as a starting point for visible growth.</h2>
-        <p>
+        <h2 data-setting="work_title">I use this portfolio as a starting point for visible growth.</h2>
+        <p data-setting="work_intro">
           This page is my personal landing page while I continue building public work, project case studies, and stronger development experience.
         </p>
       </div>
@@ -138,8 +138,8 @@
         </div>
         <div class="project-details">
           <p class="eyebrow">What this page represents</p>
-          <h3>A professional base I can keep improving.</h3>
-          <p>
+          <h3 data-setting="work_detail_title">A professional base I can keep improving.</h3>
+          <p data-setting="work_detail_body">
             My goal is to present myself clearly, avoid overclaiming, and create a solid base that can grow as I add more repositories, project screenshots, CV updates, and professional milestones.
           </p>
           <ul class="check-list">
@@ -155,7 +155,7 @@
     <section class="section-shell stack-section">
       <div class="section-heading">
         <p class="eyebrow">Tech Direction</p>
-        <h2>Tools and topics I am growing into.</h2>
+        <h2 data-setting="tech_title">Tools and topics I am growing into.</h2>
       </div>
       <div class="tag-cloud" aria-label="Technology interests">
         <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>REST API</span><span>Database Design</span><span>Git</span><span>GitHub</span><span>Web Development</span><span>Software Engineering</span><span>Information Technology</span>
@@ -165,8 +165,8 @@
     <section id="cv" class="section-shell cv-section">
       <div class="section-heading centered">
         <p class="eyebrow">Curriculum Vitae</p>
-        <h2>Reserved space for my CV preview.</h2>
-        <p>
+        <h2 data-setting="cv_title">Reserved space for my CV preview.</h2>
+        <p data-setting="cv_intro">
           I will place my CV file at <code>public/assets/curriculum_vitae.pdf</code>. Once the file is uploaded, this section will be ready for preview and download access.
         </p>
       </div>
@@ -179,8 +179,8 @@
           <h3>curriculum_vitae.pdf</h3>
           <p>Put the PDF inside <code>public/assets/</code>. The button below already points to the reserved CV path.</p>
           <div class="hero-actions left-actions">
-            <a class="btn primary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer">Open CV Preview</a>
-            <a class="btn secondary" href="assets/curriculum_vitae.pdf" download>Download CV</a>
+            <a class="btn primary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer" data-setting-href="cv_path">Open CV Preview</a>
+            <a class="btn secondary" href="assets/curriculum_vitae.pdf" download data-setting-href="cv_path">Download CV</a>
           </div>
         </div>
       </div>
@@ -189,25 +189,25 @@
     <section id="contact" class="section-shell contact-section">
       <div class="contact-card">
         <p class="eyebrow">Contact</p>
-        <h2>Let's connect and build from here.</h2>
-        <p>
+        <h2 data-setting="contact_title">Let's connect and build from here.</h2>
+        <p data-setting="contact_body">
           I am open to learning opportunities, portfolio feedback, IT discussions, and collaboration around web development and software engineering.
         </p>
         <div class="contact-actions">
-          <a class="btn primary" href="mailto:mikhaildaffa7@gmail.com">Email Me</a>
-          <a class="btn secondary" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn primary" href="mailto:mikhaildaffa7@gmail.com" data-setting-mailto="email">Email Me</a>
+          <a class="btn secondary" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer" data-setting-href="github_url">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer" data-setting-href="linkedin_url">LinkedIn</a>
         </div>
-        <small>mikhaildaffa7@gmail.com · github.com/mikhaildh20</small>
+        <small><span data-setting="email">mikhaildaffa7@gmail.com</span> · <span>github.com/mikhaildh20</span></small>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Mikhail Daffa Herdiansah</span>
-    <span>Full-Stack Developer Enthusiast · IT Student</span>
+    <span data-setting="footer_tagline">Full-Stack Developer Enthusiast · IT Student</span>
   </footer>
 
-  <script src="script.js?v=20260611-assets"></script>
+  <script src="script.js?v=20260611-db1"></script>
 </body>
 </html>
