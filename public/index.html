@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260611-assets2" />
 </head>
 <body>
   <header class="site-header">
@@ -21,25 +21,41 @@
       <a href="#about">About</a>
       <a href="#focus">Focus</a>
       <a href="#work">Work</a>
+      <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="header-cta" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer">LinkedIn</a>
+    <a class="header-cta" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer">GitHub</a>
   </header>
 
   <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-badge">
-        <span class="status-dot"></span>
-        Full-Stack Developer Enthusiast · IT Student
+    <section class="hero section-shell hero-layout">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Full-Stack Developer Enthusiast · IT Student
+        </div>
+        <h1>Turning my IT curiosity into practical web projects.</h1>
+        <p class="hero-copy">
+          Hello, I'm <strong>Mikhail Daffa Herdiansah</strong>, also known as Mike. I am an Informatics Management student at Politeknik Astra, class of 2023, with a strong passion for Information Technology and full-stack web development.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">View my direction</a>
+          <a class="btn secondary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer">Preview CV</a>
+        </div>
       </div>
-      <h1>Turning IT curiosity into practical web projects.</h1>
-      <p class="hero-copy">
-        Hello, I'm <strong>Mikhail Daffa Herdiansah</strong>, also known as Mike. I am an Informatics Management student at Politeknik Astra, class of 2023, with a strong passion for Information Technology and full-stack web development.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#work">View portfolio direction</a>
-        <a class="btn secondary" href="#contact">Let's connect</a>
-      </div>
+
+      <aside class="profile-card" aria-label="Profile photo placeholder">
+        <div class="portrait-frame">
+          <img src="assets/avatar.jpg" alt="Mikhail Daffa Herdiansah portrait" data-fallback-initials="MD" />
+          <div class="portrait-fallback" aria-hidden="true">MD</div>
+        </div>
+        <div class="profile-card-copy">
+          <p class="eyebrow">Profile Asset</p>
+          <h2>Mikhail Daffa Herdiansah</h2>
+          <p>Place my photo at <code>public/assets/avatar.jpg</code> to replace this reserved profile image area.</p>
+        </div>
+      </aside>
+
       <div class="hero-metrics" aria-label="Portfolio highlights">
         <div>
           <strong>2023</strong>
@@ -59,14 +75,14 @@
     <section id="about" class="section-shell split-section">
       <div>
         <p class="eyebrow">About</p>
-        <h2>A student building strong foundations in IT.</h2>
+        <h2>I am building strong foundations in IT.</h2>
       </div>
       <div class="content-card large-copy">
         <p>
-          Mikhail Daffa Herdiansah is an Informatics Management student at Politeknik Astra. His LinkedIn positioning highlights him as a Full-Stack Developer Enthusiast and IT Student.
+          I am an Informatics Management student at Politeknik Astra. My current LinkedIn positioning is Full-Stack Developer Enthusiast and IT Student.
         </p>
         <p>
-          He is focused on learning how to build useful web-based systems, understand software development workflows, and keep improving through practical projects.
+          I focus on learning how to build useful web-based systems, understand software development workflows, and improve through practical projects that can become real portfolio evidence.
         </p>
       </div>
     </section>
@@ -74,28 +90,28 @@
     <section id="focus" class="section-shell">
       <div class="section-heading">
         <p class="eyebrow">Focus Areas</p>
-        <h2>Skills direction aligned with full-stack development.</h2>
+        <h2>The skill direction I am developing.</h2>
       </div>
       <div class="focus-grid compact-grid">
         <article class="focus-card accent-blue">
           <span>01</span>
           <h3>Frontend Development</h3>
-          <p>Building clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.</p>
+          <p>I am learning to build clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.</p>
         </article>
         <article class="focus-card accent-pink">
           <span>02</span>
           <h3>Backend Development</h3>
-          <p>Learning server-side logic, routing, APIs, data handling, and application structure.</p>
+          <p>I am developing my understanding of server-side logic, routing, APIs, data handling, and application structure.</p>
         </article>
         <article class="focus-card accent-red">
           <span>03</span>
           <h3>Software Engineering</h3>
-          <p>Improving how projects are planned, organized, documented, versioned, and maintained.</p>
+          <p>I want to improve how I plan, organize, document, version, and maintain software projects.</p>
         </article>
         <article class="focus-card">
           <span>04</span>
           <h3>Information Technology</h3>
-          <p>Growing technical literacy across systems, databases, development tools, and real-world IT workflows.</p>
+          <p>I am growing my technical literacy across systems, databases, development tools, and real-world IT workflows.</p>
         </article>
       </div>
     </section>
@@ -103,9 +119,9 @@
     <section id="work" class="section-shell project-section">
       <div class="section-heading centered">
         <p class="eyebrow">Portfolio Direction</p>
-        <h2>Practical projects, clean documentation, and steady growth.</h2>
+        <h2>I use this portfolio as a starting point for visible growth.</h2>
         <p>
-          This portfolio is designed as Mikhail Daffa Herdiansah's personal landing page while he builds more public work, project case studies, and development experience.
+          This page is my personal landing page while I continue building public work, project case studies, and stronger development experience.
         </p>
       </div>
 
@@ -117,17 +133,17 @@
   role: "Full-Stack Developer Enthusiast",
   status: "IT Student",
   school: "Politeknik Astra",
-  cohort: 2023
+  github: "github.com/mikhaildh20"
 };</code></pre>
         </div>
         <div class="project-details">
           <p class="eyebrow">What this page represents</p>
-          <h3>A starting point for a stronger developer presence.</h3>
+          <h3>A professional base I can keep improving.</h3>
           <p>
-            The goal is simple: present Mikhail Daffa Herdiansah clearly, avoid overclaiming, and create a solid base that can grow as more projects, GitHub repositories, and professional milestones are added.
+            My goal is to present myself clearly, avoid overclaiming, and create a solid base that can grow as I add more repositories, project screenshots, CV updates, and professional milestones.
           </p>
           <ul class="check-list">
-            <li>Aligned with LinkedIn public headline and bio snippet</li>
+            <li>Aligned with my LinkedIn public headline and bio snippet</li>
             <li>Focused on full-stack and IT student positioning</li>
             <li>Ready to expand with real project cards and GitHub links</li>
             <li>Deployed on a VPS endpoint for public access</li>
@@ -139,10 +155,34 @@
     <section class="section-shell stack-section">
       <div class="section-heading">
         <p class="eyebrow">Tech Direction</p>
-        <h2>Tools and topics Mikhail Daffa Herdiansah is growing into.</h2>
+        <h2>Tools and topics I am growing into.</h2>
       </div>
       <div class="tag-cloud" aria-label="Technology interests">
         <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>REST API</span><span>Database Design</span><span>Git</span><span>GitHub</span><span>Web Development</span><span>Software Engineering</span><span>Information Technology</span>
+      </div>
+    </section>
+
+    <section id="cv" class="section-shell cv-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h2>Reserved space for my CV preview.</h2>
+        <p>
+          I will place my CV file at <code>public/assets/curriculum_vitae.pdf</code>. Once the file is uploaded, this section will be ready for preview and download access.
+        </p>
+      </div>
+      <div class="cv-preview-card">
+        <div class="cv-paper" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <p class="eyebrow">Expected file</p>
+          <h3>curriculum_vitae.pdf</h3>
+          <p>Put the PDF inside <code>public/assets/</code>. The button below already points to the reserved CV path.</p>
+          <div class="hero-actions left-actions">
+            <a class="btn primary" href="assets/curriculum_vitae.pdf" target="_blank" rel="noreferrer">Open CV Preview</a>
+            <a class="btn secondary" href="assets/curriculum_vitae.pdf" download>Download CV</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -151,22 +191,23 @@
         <p class="eyebrow">Contact</p>
         <h2>Let's connect and build from here.</h2>
         <p>
-          Open to learning opportunities, portfolio feedback, IT discussions, and collaboration around web development and software engineering.
+          I am open to learning opportunities, portfolio feedback, IT discussions, and collaboration around web development and software engineering.
         </p>
         <div class="contact-actions">
-          <a class="btn primary" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer">View profile</a>
+          <a class="btn primary" href="mailto:mikhaildaffa7@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/mikhaildhns" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-        <small>Email contact can be added later when Mikhail Daffa Herdiansah is ready to publish it.</small>
+        <small>mikhaildaffa7@gmail.com · github.com/mikhaildh20</small>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Mikhail Daffa Herdiansah</span>
-    <span>Built as a portfolio mini project with Hermes Agent.</span>
+    <span>Full-Stack Developer Enthusiast · IT Student</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260611-assets"></script>
 </body>
 </html>

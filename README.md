@@ -24,6 +24,8 @@ mike-portfolio/
 ├── docs/
 │   └── PROJECT_CONTEXT.md
 ├── public/
+│   ├── assets/
+│   │   └── README.md
 │   ├── index.html
 │   ├── styles.css
 │   └── script.js
@@ -72,6 +74,8 @@ http://43.159.62.171/portfolio/
 
 ## Next Improvements
 
+- Add `public/assets/avatar.jpg` for the reserved profile photo area.
+- Add `public/assets/curriculum_vitae.pdf` for the reserved CV preview/download section.
 - Replace placeholder contact text with a real email if Mikhail Daffa Herdiansah wants it public.
 - Add GitHub profile link.
 - Add project screenshots.

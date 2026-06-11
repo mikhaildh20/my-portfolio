@@ -16,6 +16,11 @@ Catatan penting:
 - Jangan tampilkan project Tugas Akhir di portfolio ini sampai Mike secara eksplisit meminta untuk menambahkannya lagi.
 - Jangan tampilkan Machine Learning sebagai skill/focus area di versi ini.
 - Kalau Mike memberi CV atau export teks LinkedIn, update konten berdasarkan data itu.
+- Portfolio copy should primarily use first-person point of view from Mikhail Daffa Herdiansah.
+- Primary name usage should be formal: `Mikhail Daffa Herdiansah`; `Mike` may appear only as a secondary nickname mention.
+- GitHub profile: `https://github.com/mikhaildh20`.
+- Public email: `mikhaildaffa7@gmail.com`.
+- Reserved asset filenames: `public/assets/avatar.jpg` and `public/assets/curriculum_vitae.pdf`.
 
 ## Goal Website
 
