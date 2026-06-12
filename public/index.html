@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260611-db1" />
+  <link rel="stylesheet" href="styles.css?v=20260612-dynamic1" />
 </head>
 <body>
   <header class="site-header">
@@ -21,6 +21,8 @@
       <a href="#about">About</a>
       <a href="#focus">Focus</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -92,28 +94,7 @@
         <p class="eyebrow">Focus Areas</p>
         <h2 data-setting="focus_title">The skill direction I am developing.</h2>
       </div>
-      <div class="focus-grid compact-grid">
-        <article class="focus-card accent-blue">
-          <span>01</span>
-          <h3 data-setting="focus_1_title">Frontend Development</h3>
-          <p data-setting="focus_1_body">I am learning to build clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.</p>
-        </article>
-        <article class="focus-card accent-pink">
-          <span>02</span>
-          <h3 data-setting="focus_2_title">Backend Development</h3>
-          <p data-setting="focus_2_body">I am developing my understanding of server-side logic, routing, APIs, data handling, and application structure.</p>
-        </article>
-        <article class="focus-card accent-red">
-          <span>03</span>
-          <h3 data-setting="focus_3_title">Software Engineering</h3>
-          <p data-setting="focus_3_body">I want to improve how I plan, organize, document, version, and maintain software projects.</p>
-        </article>
-        <article class="focus-card">
-          <span>04</span>
-          <h3 data-setting="focus_4_title">Information Technology</h3>
-          <p data-setting="focus_4_body">I am growing my technical literacy across systems, databases, development tools, and real-world IT workflows.</p>
-        </article>
-      </div>
+      <div class="focus-grid compact-grid" id="focus-list" aria-live="polite"></div>
     </section>
 
     <section id="work" class="section-shell project-section">
@@ -157,9 +138,44 @@
         <p class="eyebrow">Tech Direction</p>
         <h2 data-setting="tech_title">Tools and topics I am growing into.</h2>
       </div>
-      <div class="tag-cloud" aria-label="Technology interests">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>REST API</span><span>Database Design</span><span>Git</span><span>GitHub</span><span>Web Development</span><span>Software Engineering</span><span>Information Technology</span>
+      <div class="tag-cloud" id="tech-list" aria-label="Technology interests" aria-live="polite"></div>
+    </section>
+
+
+    <section id="experience" class="section-shell dynamic-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Experience</p>
+        <h2 data-setting="experience_title">Experience</h2>
+        <p data-setting="experience_intro">Roles and work experiences can be updated anytime from PostgreSQL.</p>
       </div>
+      <div class="timeline-list" id="experience-list" aria-live="polite"></div>
+    </section>
+
+    <section id="education" class="section-shell dynamic-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Education</p>
+        <h2 data-setting="education_title">Education</h2>
+        <p data-setting="education_intro">Formal education history and school/campus details are managed dynamically.</p>
+      </div>
+      <div class="media-grid" id="education-list" aria-live="polite"></div>
+    </section>
+
+    <section id="certifications" class="section-shell dynamic-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Licenses & Certifications</p>
+        <h2 data-setting="certification_title">Licenses & Certifications</h2>
+        <p data-setting="certification_intro">Certificates, issuers, images, and PDF previews are managed from the database.</p>
+      </div>
+      <div class="media-grid" id="certification-list" aria-live="polite"></div>
+    </section>
+
+    <section id="projects" class="section-shell dynamic-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Projects</p>
+        <h2 data-setting="project_title">Projects</h2>
+        <p data-setting="project_intro">Selected projects can grow over time with screenshots, periods, and descriptions.</p>
+      </div>
+      <div class="project-card-grid" id="project-list" aria-live="polite"></div>
     </section>
 
     <section id="cv" class="section-shell cv-section">
@@ -208,6 +224,6 @@
     <span data-setting="footer_tagline">Full-Stack Developer Enthusiast · IT Student</span>
   </footer>
 
-  <script src="script.js?v=20260611-db1"></script>
+  <script src="script.js?v=20260612-dynamic1"></script>
 </body>
 </html>

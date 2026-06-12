@@ -10,8 +10,8 @@ export const DEFAULT_SETTINGS = {
   hero_primary_label: 'View my direction',
   hero_secondary_label: 'Preview CV',
   hero_secondary_url: 'assets/curriculum_vitae.pdf',
-  avatar_path: 'assets/avatar.jpg',
-  profile_asset_note: 'Place my photo at public/assets/avatar.jpg to replace this reserved profile image area.',
+  avatar_path: 'assets/paspoto_mikhail.png',
+  profile_asset_note: 'Profile photo is managed from PostgreSQL using avatar_path.',
   about_title: 'I am building strong foundations in IT.',
   about_paragraph_1: 'I am an Informatics Management student at Politeknik Astra. My current LinkedIn positioning is Full-Stack Developer Enthusiast and IT Student.',
   about_paragraph_2: 'I focus on learning how to build useful web-based systems, understand software development workflows, and improve through practical projects that can become real portfolio evidence.',
@@ -32,6 +32,14 @@ export const DEFAULT_SETTINGS = {
   cv_title: 'Reserved space for my CV preview.',
   cv_intro: 'I will place my CV file at public/assets/curriculum_vitae.pdf. Once the file is uploaded, this section will be ready for preview and download access.',
   cv_path: 'assets/curriculum_vitae.pdf',
+  experience_title: 'Experience',
+  experience_intro: 'Roles and work experiences can be updated anytime from PostgreSQL.',
+  education_title: 'Education',
+  education_intro: 'Formal education history and school/campus details are managed dynamically.',
+  certification_title: 'Licenses & Certifications',
+  certification_intro: 'Certificates, issuers, images, and PDF previews are managed from the database.',
+  project_title: 'Projects',
+  project_intro: 'Selected projects can grow over time with screenshots, periods, and descriptions.',
   contact_title: "Let's connect and build from here.",
   contact_body: 'I am open to learning opportunities, portfolio feedback, IT discussions, and collaboration around web development and software engineering.',
   email: 'mikhaildaffa7@gmail.com',
@@ -48,17 +56,54 @@ export function rowsToSettings(rows) {
   );
 }
 
+export function buildCollection(settings, prefix, fields, requiredField = fields[0]) {
+  const recordsByIndex = new Map();
+  const pattern = new RegExp(`^${prefix}_(\\d+)_(${fields.join('|')})$`);
+
+  Object.entries(settings || {}).forEach(([key, value]) => {
+    const match = key.match(pattern);
+    if (!match) return;
+    const index = Number(match[1]);
+    const field = match[2];
+    const current = recordsByIndex.get(index) || {};
+    current[field] = value ?? '';
+    recordsByIndex.set(index, current);
+  });
+
+  return [...recordsByIndex.entries()]
+    .sort(([a], [b]) => a - b)
+    .map(([, record]) => record)
+    .filter((record) => String(record[requiredField] || '').trim() !== '');
+}
+
+export function buildStructuredSettings(settings) {
+  return {
+    focusAreas: buildCollection(settings, 'focus', ['title', 'body'], 'title'),
+    techItems: buildCollection(settings, 'tech', ['label'], 'label'),
+    experiences: buildCollection(settings, 'experience', ['role', 'company', 'status', 'period', 'location', 'description'], 'role'),
+    education: buildCollection(settings, 'education', ['school', 'year', 'description', 'image_path', 'image_alt'], 'school'),
+    certifications: buildCollection(settings, 'certification', ['name', 'issuer', 'image_path', 'image_alt', 'pdf_path'], 'name'),
+    projects: buildCollection(settings, 'project', ['name', 'period', 'description', 'image_path', 'image_alt', 'url'], 'name'),
+  };
+}
+
 export async function getSettings(pool) {
   if (!pool) {
-    return { ...DEFAULT_SETTINGS };
+    const settings = { ...DEFAULT_SETTINGS };
+    return { ...settings, collections: buildStructuredSettings(settings) };
   }
 
   const { rows } = await pool.query(
     'select setting_key, setting_value from mst_detail_settings order by setting_key asc'
   );
 
-  return {
+  const settings = {
     ...DEFAULT_SETTINGS,
     ...rowsToSettings(rows),
+  };
+
+  return {
+    ...settings,
+    collections: buildStructuredSettings(settings),
   };
 }
