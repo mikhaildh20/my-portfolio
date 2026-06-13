@@ -1,74 +1,96 @@
 # Project Context — Mike Portfolio
 
-## Identity
+## Purpose
 
-Name: Mikhail Daffa Herdiansah  
-Nickname: Mike, used only as a secondary mention  
-LinkedIn: https://www.linkedin.com/in/mikhaildhns
+Public personal portfolio for Mikhail Daffa Herdiansah. Keep this context separate from Karsa Home, KVS, and Hermes Dashboard.
 
-## LinkedIn-Synced Public Positioning
+## Identity / Brand
 
-Public LinkedIn search result shows:
+- Formal name: Mikhail Daffa Herdiansah
+- Nickname: Mike, secondary only
+- LinkedIn: `https://www.linkedin.com/in/mikhaildhns`
+- GitHub: `https://github.com/mikhaildh20`
+- Email: `mikhaildaffa7@gmail.com`
+- Positioning: Full-Stack Developer Enthusiast | IT Student
+- Student: Informatics Management, Politeknik Astra, class of 2023
 
-> Mikhail Daffa - Full-Stack Developer Enthusiast | IT Student ...
+Portfolio tone should feel ambitious, grounded, technical, readable, student-friendly, clean, practical, and future-facing.
 
-Public bio snippet shows:
+Avoid overclaiming, fake work experience, unsupported certifications, unsupported project claims, buzzword spam, and overly corporate copy.
 
-> Hello! I'm Mikhail Daffa Herdiansah, an Informatics Management student at Politeknik Astra (Class of 2023). I have a strong passion for Information ...
+## Repo / Path
 
-Use this as the source of truth until Mikhail Daffa Herdiansah provides a full LinkedIn export/CV.
+- Repo: `mikhaildh20/my-portfolio`
+- Path: `/opt/projects/mike-portfolio`
+- Branch: `main`
 
-## Current Positioning
+## Runtime
 
-Mikhail Daffa Herdiansah is an Informatics Management student at Politeknik Astra, class of 2023. His current public portfolio positioning is:
+- App: Node.js + Express/static portfolio
+- Service: `plugplay-mike-portfolio.service`
+- Internal port: `3200`
+- Public URL: `https://portfolio.karsa-dev.my.id/`
+- Historical path URL: `https://karsa-dev.my.id/portfolio/` redirects to subdomain
+- Deployment pattern: systemd + Nginx, not PM2
 
-> Full-Stack Developer Enthusiast | IT Student
+## Database
 
-## Main Focus Areas for This Portfolio Version
+- DBMS: PostgreSQL
+- Database: `my_portfolio`
+- Main table: `mst_detail_settings`
+- Content is dynamic through settings and collection-style keys.
 
-- Frontend Development
-- Backend Development
-- Software Engineering
-- Information Technology
-- Web Development
-- Git/GitHub and project documentation
+## Content Rules
 
-Do not include Machine Learning in this version.
-Do not include the final project / Tugas Akhir in this version.
+- Site copy should be English.
+- Use first-person perspective.
+- Use formal name primarily; use “Mike” sparingly as secondary nickname.
+- Do not include Tugas Akhir / Kanban / KVS content unless explicitly requested.
+- Do not include Machine Learning content unless explicitly requested.
+- Do not credit Hermes agent in footer.
+- Keep claims aligned with verified LinkedIn/CV facts.
 
-## Personality / Brand
+## Dynamic Sections
 
-Mikhail Daffa Herdiansah's portfolio should feel:
+Known dynamic areas include:
 
-- ambitious but grounded;
-- technical but still readable;
-- student-friendly but not childish;
-- clean, practical, and future-facing.
+- Hero
+- About
+- Focus Areas
+- Tech Direction
+- Experience
+- Education
+- Licenses & Certifications
+- Projects
+- Contact
 
-Avoid:
+Collection keys use DB-driven patterns, so prefer editing DB/settings over hardcoding when content changes.
 
-- overclaiming expertise;
-- fake work experience;
-- unsupported certifications;
-- unsupported project claims;
-- too much buzzword spam;
-- overly corporate copy.
+## Assets
 
-## Sections Needed
+- Portfolio asset folder: `/opt/projects/mike-portfolio/public/assets/`
+- Karsa Home card image for this project lives in Karsa Home, not here:
+  - `/opt/projects/karsa-home/public/assets/portfolio-preview.svg`
+  - Public path: `/home-assets/portfolio-preview.svg`
 
-1. Hero
-2. About
-3. Focus Areas
-4. Portfolio Direction / Work Direction
-5. Tech Direction
-6. Contact
+## Verification Checklist
 
-## Future Content To Add
+Before reporting Portfolio work as done:
 
-- Real project screenshots
-- GitHub link
-- CV PDF
-- Certifications if verified
-- Internship/work experience if verified
-- Blog/case study pages
-- Project cards from real repositories
+1. Run project tests/checks if code changed.
+2. `systemctl is-active plugplay-mike-portfolio.service`.
+3. Check health endpoint if available.
+4. Verify public URL returns HTTP 200.
+5. Verify DB-backed content still loads.
+6. Confirm no real credentials/secrets are committed or printed.
+
+## Context Boundary
+
+When the user says Portfolio context, focus only on:
+
+- `/opt/projects/mike-portfolio`
+- PostgreSQL database `my_portfolio`
+- `https://portfolio.karsa-dev.my.id/`
+
+Do not modify Karsa Home except when the user asks to update the portfolio card shown on the homepage.
+Do not modify KVS or Hermes Dashboard unless explicitly requested.
