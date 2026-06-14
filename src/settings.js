@@ -33,7 +33,7 @@ export const DEFAULT_SETTINGS = {
   cv_intro: 'I will place my CV file at public/assets/curriculum_vitae.pdf. Once the file is uploaded, this section will be ready for preview and download access.',
   cv_path: 'assets/curriculum_vitae.pdf',
   experience_title: 'Experience',
-  experience_intro: 'Roles and work experiences can be updated anytime from PostgreSQL.',
+  experience_intro: 'Work, internship, freelance, and part-time experiences focused on real professional or event operations.',
   education_title: 'Education',
   education_intro: 'Formal education history and school/campus details are managed dynamically.',
   certification_title: 'Licenses & Certifications',

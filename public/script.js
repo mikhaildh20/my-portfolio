@@ -40,14 +40,27 @@ function renderTech(items = []) {
 function renderExperience(items = []) {
   const target = document.getElementById('experience-list');
   if (!target) return;
-  target.innerHTML = items.map((item) => `
-    <article class="timeline-card">
-      <div class="timeline-meta"><span>${escapeHtml(item.period)}</span><span>${escapeHtml(item.status)}</span></div>
-      <h3>${escapeHtml(item.role)}</h3>
-      <strong>${escapeHtml(item.company)}</strong>
-      <small>${escapeHtml(item.location)}</small>
-      <p>${escapeHtml(item.description)}</p>
-    </article>`).join('');
+  target.innerHTML = items.map((item) => {
+    const meta = [item.period, item.status]
+      .filter((value) => String(value || '').trim() !== '')
+      .map((value) => `<span>${escapeHtml(value)}</span>`)
+      .join('');
+    const location = String(item.location || '').trim()
+      ? `<small>${escapeHtml(item.location)}</small>`
+      : '';
+    const description = String(item.description || '').trim()
+      ? `<p>${escapeHtml(item.description)}</p>`
+      : '';
+
+    return `
+      <article class="timeline-card">
+        ${meta ? `<div class="timeline-meta">${meta}</div>` : ''}
+        <h3>${escapeHtml(item.role)}</h3>
+        <strong>${escapeHtml(item.company)}</strong>
+        ${location}
+        ${description}
+      </article>`;
+  }).join('');
 }
 
 function imageMarkup(path, alt) {

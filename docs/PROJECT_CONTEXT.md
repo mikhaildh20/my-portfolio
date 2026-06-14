@@ -46,6 +46,7 @@ Avoid overclaiming, fake work experience, unsupported certifications, unsupporte
 - Use first-person perspective.
 - Use formal name primarily; use “Mike” sparingly as secondary nickname.
 - Do not include Tugas Akhir / Kanban / KVS content unless explicitly requested.
+- Do not include academic/final-project entries in the Experience section; Experience is reserved for work, internship, freelance, or part-time roles.
 - Do not include Machine Learning content unless explicitly requested.
 - Do not credit Hermes agent in footer.
 - Keep claims aligned with verified LinkedIn/CV facts.

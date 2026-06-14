@@ -14,6 +14,7 @@ Catatan penting:
 
 - LinkedIn full page terkena auth wall, jadi jangan klaim detail pengalaman, sertifikasi, organisasi, atau project yang belum ada di sumber lokal.
 - Jangan tampilkan project Tugas Akhir di portfolio ini sampai Mike secara eksplisit meminta untuk menambahkannya lagi.
+- Jangan tampilkan academic/final-project sebagai item Experience; section Experience khusus untuk kerja, magang, freelance, atau part-time.
 - Jangan tampilkan Machine Learning sebagai skill/focus area di versi ini.
 - Kalau Mike memberi CV atau export teks LinkedIn, update konten berdasarkan data itu.
 - Portfolio copy should primarily use first-person point of view from Mikhail Daffa Herdiansah.
