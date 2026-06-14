@@ -124,11 +124,7 @@ http://43.159.62.171/portfolio/
 
 ## Next Improvements
 
-- Add `public/assets/avatar.jpg` for the reserved profile photo area.
-- Add `public/assets/curriculum_vitae.pdf` for the reserved CV preview/download section.
-- Replace placeholder contact text with a real email if Mikhail Daffa Herdiansah wants it public.
-- Add GitHub profile link.
-- Add project screenshots.
-- Add downloadable CV.
-- Add verified project cards from real repositories.
-- Add real certification/experience content from LinkedIn export or CV.
+- Keep the profile photo updated through the `avatar_path` portfolio setting.
+- Keep contact links current for email, GitHub, and LinkedIn.
+- Add new verified work, internship, freelance, part-time, education, or certification records as Mikhail Daffa Herdiansah provides them.
+- Reintroduce Projects or Curriculum Vitae sections only if Mike explicitly requests them later.

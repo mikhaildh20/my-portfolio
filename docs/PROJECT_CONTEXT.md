@@ -48,6 +48,7 @@ Avoid overclaiming, fake work experience, unsupported certifications, unsupporte
 - Do not include Tugas Akhir / Kanban / KVS content unless explicitly requested.
 - Do not include academic/final-project entries in the Experience section; Experience is reserved for work, internship, freelance, or part-time roles.
 - Do not include Machine Learning content unless explicitly requested.
+- Current live page intentionally does not show Projects or Curriculum Vitae sections; add them back only if Mike explicitly requests.
 - Do not credit Hermes agent in footer.
 - Keep claims aligned with verified LinkedIn/CV facts.
 
@@ -62,7 +63,6 @@ Known dynamic areas include:
 - Experience
 - Education
 - Licenses & Certifications
-- Projects
 - Contact
 
 Collection keys use DB-driven patterns, so prefer editing DB/settings over hardcoding when content changes.

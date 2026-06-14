@@ -89,23 +89,12 @@ function renderCertifications(items = []) {
     </article>`).join('');
 }
 
-function renderProjects(items = []) {
-  const target = document.getElementById('project-list');
-  if (!target) return;
-  target.innerHTML = items.map((item) => `
-    <article class="project-showcase-card">
-      <div class="project-image">${imageMarkup(item.image_path, item.image_alt || item.name)}</div>
-      <div class="project-showcase-body"><span class="eyebrow">${escapeHtml(item.period)}</span><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description)}</p>${item.url ? `<a class="btn primary" href="${safeUrl(item.url)}" target="_blank" rel="noreferrer">Open Project</a>` : ''}</div>
-    </article>`).join('');
-}
-
 function applyCollections(collections = {}) {
   renderFocus(collections.focusAreas || []);
   renderTech(collections.techItems || []);
   renderExperience(collections.experiences || []);
   renderEducation(collections.education || []);
   renderCertifications(collections.certifications || []);
-  renderProjects(collections.projects || []);
 }
 
 function applySettings(settings) {

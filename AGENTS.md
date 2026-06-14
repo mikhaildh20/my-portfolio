@@ -21,7 +21,7 @@ Catatan penting:
 - Primary name usage should be formal: `Mikhail Daffa Herdiansah`; `Mike` may appear only as a secondary nickname mention.
 - GitHub profile: `https://github.com/mikhaildh20`.
 - Public email: `mikhaildaffa7@gmail.com`.
-- Reserved asset filenames: `public/assets/avatar.jpg` and `public/assets/curriculum_vitae.pdf`.
+- Main profile photo asset is managed through the `avatar_path` setting.
 
 ## Goal Website
 
@@ -30,7 +30,7 @@ Website harus berfungsi sebagai portfolio awal yang:
 - terlihat profesional untuk mahasiswa IT yang sedang membangun karier;
 - menonjolkan positioning Mike sebagai Full-Stack Developer Enthusiast dan IT Student;
 - bisa dipakai sebagai landing page portofolio pribadi;
-- siap dikembangkan untuk project, CV, blog, atau case study baru;
+- siap dikembangkan sebagai landing page profesional yang menampilkan background, experience, education, dan certifications;
 - bisa dideploy di VPS via endpoint PlugPlay Server.
 
 ## Tone & Copywriting
