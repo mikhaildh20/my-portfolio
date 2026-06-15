@@ -102,25 +102,27 @@ The frontend loads settings from:
 /api/settings
 ```
 
-## Deploy on PlugPlay Server
+## Deploy on VPS
 
-Create service:
+Runtime service:
 
-```bash
-plugplay-service-node mike-portfolio 3200 "npm start"
+```txt
+plugplay-mike-portfolio.service
 ```
 
-Map endpoint:
+Internal port:
 
-```bash
-plugplay-add-path portfolio 3200 mike-portfolio
+```txt
+3200
 ```
 
 Public URL:
 
 ```txt
-http://43.159.62.171/portfolio/
+https://portfolio.karsa-dev.my.id/
 ```
+
+The historical path URL redirects to the portfolio subdomain.
 
 ## Next Improvements
 

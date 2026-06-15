@@ -47,6 +47,8 @@ Avoid overclaiming, fake work experience, unsupported certifications, unsupporte
 - Use formal name primarily; use “Mike” sparingly as secondary nickname.
 - Do not include Tugas Akhir / Kanban / KVS content unless explicitly requested.
 - Do not include academic/final-project entries in the Experience section; Experience is reserved for work, internship, freelance, or part-time roles.
+- Portfolio/work history should refer to the IT Developer internship company as `PT Indonesia Koito`.
+- Do not change portfolio work-history company names when the user asks for KVS/NLA branding text.
 - Do not include Machine Learning content unless explicitly requested.
 - Current live page intentionally does not show Projects or Curriculum Vitae sections; add them back only if Mike explicitly requests.
 - Do not credit Hermes agent in footer.

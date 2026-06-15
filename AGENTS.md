@@ -1,98 +1,63 @@
-# AGENTS.md — Mike Portfolio
+# Agent Notes — Mike Portfolio
 
-Project ini adalah web portfolio personal untuk Mikhail Daffa Herdiansah / Mike.
+Always read `docs/PROJECT_CONTEXT.md` before making portfolio changes.
 
-## Sumber Konten
+This repo is the public personal portfolio for Mikhail Daffa Herdiansah / Mike. Keep this context separate from KVS, Karsa Home, and Hermes Dashboard.
 
-Konten utama harus sinkron dengan data LinkedIn publik yang berhasil dibaca:
+## Source of Truth
 
-- Profil LinkedIn publik: `https://id.linkedin.com/in/mikhaildhns`
-- Headline publik: `Mikhail Daffa - Full-Stack Developer Enthusiast | IT Student ...`
-- Bio snippet publik: `Hello! I'm Mikhail Daffa Herdiansah, an Informatics Management student at Politeknik Astra (Class of 2023). I have a strong passion for Information ...`
+- Public LinkedIn profile: `https://id.linkedin.com/in/mikhaildhns`
+- GitHub profile: `https://github.com/mikhaildh20`
+- Public email: `mikhaildaffa7@gmail.com`
+- LinkedIn may be behind an auth wall; do not invent experience, certifications, organizations, or projects that are not in local project context, DB settings, CV/export text, or explicit user input.
+- Main profile photo is configured through the `avatar_path` setting.
 
-Catatan penting:
+## Content Rules
 
-- LinkedIn full page terkena auth wall, jadi jangan klaim detail pengalaman, sertifikasi, organisasi, atau project yang belum ada di sumber lokal.
-- Jangan tampilkan project Tugas Akhir di portfolio ini sampai Mike secara eksplisit meminta untuk menambahkannya lagi.
-- Jangan tampilkan academic/final-project sebagai item Experience; section Experience khusus untuk kerja, magang, freelance, atau part-time.
-- Jangan tampilkan Machine Learning sebagai skill/focus area di versi ini.
-- Kalau Mike memberi CV atau export teks LinkedIn, update konten berdasarkan data itu.
-- Portfolio copy should primarily use first-person point of view from Mikhail Daffa Herdiansah.
-- Primary name usage should be formal: `Mikhail Daffa Herdiansah`; `Mike` may appear only as a secondary nickname mention.
-- GitHub profile: `https://github.com/mikhaildh20`.
-- Public email: `mikhaildaffa7@gmail.com`.
-- Main profile photo asset is managed through the `avatar_path` setting.
+- Main language: English.
+- Copy style: first-person, practical, confident, grounded, not exaggerated.
+- Primary name: `Mikhail Daffa Herdiansah`; `Mike` can appear only as a secondary nickname.
+- Positioning: IT student, Full-Stack Developer Enthusiast, builder.
+- Do not claim senior/expert status or unsupported professional experience.
+- Do not show Tugas Akhir / Kanban / KVS content unless Mike explicitly asks.
+- Do not show academic/final-project entries in Experience.
+- Experience is only for work, internship, freelance, or part-time roles.
+- Do not show Machine Learning content unless explicitly requested.
+- Current live site intentionally has no Projects section and no Curriculum Vitae section.
+- Portfolio/work history should refer to the IT Developer internship company as `PT Indonesia Koito`; do not change it to KVS/NLA branding unless Mike explicitly asks for portfolio content.
 
-## Goal Website
+## Runtime / Deployment
 
-Website harus berfungsi sebagai portfolio awal yang:
-
-- terlihat profesional untuk mahasiswa IT yang sedang membangun karier;
-- menonjolkan positioning Mike sebagai Full-Stack Developer Enthusiast dan IT Student;
-- bisa dipakai sebagai landing page portofolio pribadi;
-- siap dikembangkan sebagai landing page profesional yang menampilkan background, experience, education, dan certifications;
-- bisa dideploy di VPS via endpoint PlugPlay Server.
-
-## Tone & Copywriting
-
-- Bahasa utama: English untuk kesan profesional/internasional.
-- Gaya: confident, practical, ambitious, tidak lebay.
-- Jangan membuat klaim palsu seperti “expert”, “senior”, atau pengalaman kerja yang belum disebutkan.
-- Gunakan positioning: IT student, builder, full-stack developer enthusiast.
+- App: Node.js + Express serving static files and DB-backed settings.
+- Content DB: PostgreSQL `my_portfolio`, table `mst_detail_settings`.
+- Service: `plugplay-mike-portfolio.service`.
+- Internal port: `3200`.
+- Public URL: `https://portfolio.karsa-dev.my.id/`.
+- Historical path URL redirects to the portfolio subdomain.
+- Deployment pattern: systemd + Nginx, not PM2.
 
 ## Design Direction
 
-Gunakan gaya clean developer portfolio terinspirasi Vercel:
+- Clean developer portfolio inspired by Vercel.
+- White background, near-black text, Geist font.
+- Thin shadow/border cards.
+- Responsive layout.
+- Minimal, professional, readable, and not overdesigned.
 
-- white background;
-- near-black text `#171717`;
-- Geist font;
-- thin shadow-as-border cards;
-- responsive layout;
-- minimal tapi tetap punya karakter;
-- aksen biru/pink/merah hanya untuk bidang fokus atau workflow.
+## Editing Rules
 
-## Tech Stack
-
-- Node.js + Express untuk serving static files.
-- HTML, CSS, vanilla JS.
-- No build step dulu agar mini project simpel dan gampang deploy.
-
-## Folder Structure
-
-```txt
-mike-portfolio/
-├── AGENTS.md
-├── README.md
-├── package.json
-├── docs/
-│   └── PROJECT_CONTEXT.md
-├── public/
-│   ├── index.html
-│   ├── styles.css
-│   └── script.js
-└── src/
-    └── server.js
-```
-
-## Deployment Rules
-
-- App listen di `127.0.0.1`, port dari env `PORT` default `3200`.
-- Systemd service name: `plugplay-mike-portfolio.service`.
-- Primary endpoint: `http://43.159.62.171/portfolio/`.
-- Add route with:
-
-```bash
-plugplay-add-path portfolio 3200 mike-portfolio
-```
+- Prefer DB/settings edits for dynamic content such as hero, focus areas, experience, education, certifications, and contact.
+- Use code edits only for rendering behavior, layout, styling, or structural site changes.
+- Do not hardcode dynamic content into JS/HTML if the DB setting already owns it.
+- Keep portfolio changes isolated to `/opt/projects/mike-portfolio` and `my_portfolio` unless Mike explicitly asks for another project.
 
 ## Quality Checklist
 
-- Page bisa dibuka lokal via `http://127.0.0.1:3200`.
-- Page bisa dibuka publik via `http://43.159.62.171/portfolio/`.
-- Health check tersedia di `/health` dan `/portfolio/health`.
-- Responsive di mobile.
-- Link LinkedIn valid.
-- README punya cara run/deploy.
-- Tidak ada placeholder yang terlalu mentah seperti `Lorem ipsum`.
-- Tidak ada konten TA atau Machine Learning pada versi ini.
+Before reporting portfolio work as done:
+
+1. Run project tests/checks if code changed.
+2. Confirm `plugplay-mike-portfolio.service` is active.
+3. Check `/health` if relevant.
+4. Verify `https://portfolio.karsa-dev.my.id/` returns HTTP 200.
+5. Verify DB-backed content still loads.
+6. Confirm no credentials/secrets are committed, printed, or exposed.
