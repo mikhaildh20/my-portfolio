@@ -19,7 +19,7 @@ export const DEFAULT_SETTINGS = {
   focus_1_title: 'Frontend Development',
   focus_1_body: 'I am learning to build clean interfaces with HTML, CSS, JavaScript, and responsive layout fundamentals.',
   focus_2_title: 'Backend Development',
-  focus_2_body: 'I am developing my understanding of server-side logic, routing, APIs, data handling, and application structure.',
+  focus_2_body: 'I am developing my understanding of server side logic, routing, APIs, data handling, and application structure.',
   focus_3_title: 'Software Engineering',
   focus_3_body: 'I want to improve how I plan, organize, document, version, and maintain software projects.',
   focus_4_title: 'Information Technology',
