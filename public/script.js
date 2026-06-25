@@ -153,3 +153,41 @@ if (portrait) {
 }
 
 loadSettings();
+
+// Scroll Reveal Observer
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+function observeReveals() {
+  document.querySelectorAll('.section-shell:not(.hero), .project-panel').forEach(el => {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    }
+  });
+}
+
+observeReveals();
+
+const contentObserver = new MutationObserver((mutations) => {
+  mutations.forEach(mutation => {
+    mutation.addedNodes.forEach(node => {
+      if (node.nodeType === 1 && (node.classList.contains('focus-card') || node.classList.contains('timeline-card') || node.classList.contains('media-card'))) {
+        node.classList.add('reveal');
+        setTimeout(() => revealObserver.observe(node), 50);
+      }
+    });
+  });
+});
+
+const listsToObserve = ['focus-list', 'experience-list', 'education-list', 'certification-list'];
+listsToObserve.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) contentObserver.observe(el, { childList: true });
+});
