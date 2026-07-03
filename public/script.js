@@ -1,5 +1,20 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const liveClock = document.getElementById('live-clock');
+function updateLiveClock() {
+  if (!liveClock) return;
+  const now = new Date();
+  const stamp = now.toLocaleString('en-GB', {
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: false
+  }).replace(',', '');
+  liveClock.textContent = stamp;
+  liveClock.dateTime = now.toISOString();
+}
+updateLiveClock();
+setInterval(updateLiveClock, 1000);
+
 const header = document.querySelector('.site-header');
 const navLinks = [...document.querySelectorAll('.nav-links a')];
 const supportsFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -239,7 +254,7 @@ function setupResponsiveCursor() {
 
   window.addEventListener('pointermove', move, { passive: true });
   document.addEventListener('pointerover', (event) => {
-    document.body.classList.toggle('cursor-hover', Boolean(event.target.closest('a, button, .focus-card, .timeline-card, .media-card, .profile-card')));
+    document.body.classList.toggle('cursor-hover', Boolean(event.target.closest('a, button, .focus-card, .timeline-card, .media-card, .profile-card, .project-panel, .tag-cloud span')));
   });
   animate();
 }
@@ -254,6 +269,23 @@ function setupTouchPulse() {
     document.body.appendChild(pulse);
     pulse.addEventListener('animationend', () => pulse.remove(), { once: true });
   }, { passive: true });
+}
+
+function setupTiltCards() {
+  if (!supportsFinePointer || prefersReducedMotion) return;
+  document.querySelectorAll('[data-tilt-card]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty('--ry', `${x * 5}deg`);
+      card.style.setProperty('--rx', `${y * -5}deg`);
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--ry', '0deg');
+      card.style.setProperty('--rx', '0deg');
+    });
+  });
 }
 
 function setupScrollGraphic() {
@@ -273,3 +305,4 @@ setupActiveNavigation();
 setupResponsiveCursor();
 setupTouchPulse();
 setupScrollGraphic();
+setupTiltCards();

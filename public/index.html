@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Mikhail Daffa Herdiansah — Full-Stack Developer Enthusiast and IT Student at Politeknik Astra." />
-  <meta name="theme-color" content="#f7f9fc" />
+  <meta name="theme-color" content="#050608" />
   <link rel="icon" type="image/svg+xml" href="assets/karsa-logo.svg" />
   <title>Mikhail Daffa Herdiansah — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260702-tech-ui" />
+  <link rel="stylesheet" href="styles.css?v=20260703-terminal-ui" />
 </head>
 <body>
   <header class="site-header">
@@ -25,22 +25,29 @@
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="header-system" aria-label="Live system clock">
+      <span class="header-status">ONLINE</span>
+      <time id="live-clock" datetime=""></time>
+    </div>
     <a class="header-cta" href="https://github.com/mikhaildh20" target="_blank" rel="noreferrer" data-setting="header_cta_label" data-setting-href="header_cta_url">GitHub</a>
   </header>
 
   <main id="top">
-    <section class="hero section-shell hero-layout">
+    <section class="hero section-shell hero-layout" data-tilt-scope>
       <div class="hero-graphic" aria-hidden="true">
+        <div class="signal-line"></div>
         <div class="orbit"></div>
         <div class="orbit two"></div>
         <div class="graph-grid"></div>
+        <div class="floating-node node-a"></div>
+        <div class="floating-node node-b"></div>
       </div>
       <div class="hero-content">
         <div class="hero-badge">
           <span class="status-dot"></span>
           <span data-setting="hero_badge">Full-Stack Developer Enthusiast · IT Student</span>
         </div>
-        <h1 data-setting="hero_title">Turning my IT curiosity into practical web projects.</h1>
+        <h1><span data-setting="hero_title">Turning my IT curiosity into practical web projects.</span></h1>
         <p class="hero-copy" data-setting="hero_intro">
           Hello, I'm Mikhail Daffa Herdiansah, also known as Mike. I am an Informatics Management student at Politeknik Astra, class of 2023, with a strong passion for Information Technology and full-stack web development.
         </p>
@@ -50,7 +57,7 @@
         </div>
       </div>
 
-      <aside class="profile-card" aria-label="Profile photo placeholder">
+      <aside class="profile-card interactive-card" aria-label="Profile photo placeholder" data-tilt-card>
         <div class="portrait-frame">
           <img src="assets/avatar.jpg" alt="Mikhail Daffa Herdiansah portrait" data-setting-src="avatar_path" data-fallback-initials="MD" />
           <div class="portrait-fallback" aria-hidden="true">MD</div>
@@ -62,25 +69,28 @@
         </div>
       </aside>
 
-      <div class="hero-metrics" aria-label="Portfolio highlights">
-        <div>
+      <div class="hero-metrics command-board" aria-label="Portfolio highlights">
+        <div class="metric-row">
+          <span class="metric-index">01</span>
           <strong>2023</strong>
           <span>Politeknik Astra cohort</span>
         </div>
-        <div>
+        <div class="metric-row">
+          <span class="metric-index">02</span>
           <strong>IT</strong>
           <span>Informatics Management student</span>
         </div>
-        <div>
+        <div class="metric-row">
+          <span class="metric-index">03</span>
           <strong>Full-Stack</strong>
           <span>developer enthusiast</span>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section-shell split-section">
+    <section id="about" class="section-shell split-section panel-section">
       <div>
-        <p class="eyebrow">About</p>
+        <p class="eyebrow">// About</p>
         <h2 data-setting="about_title">I am building strong foundations in IT.</h2>
       </div>
       <div class="content-card large-copy">
@@ -95,7 +105,7 @@
 
     <section id="focus" class="section-shell">
       <div class="section-heading">
-        <p class="eyebrow">Focus Areas</p>
+        <p class="eyebrow">// Focus Areas</p>
         <h2 data-setting="focus_title">The skill direction I am developing.</h2>
       </div>
       <div class="focus-grid compact-grid" id="focus-list" aria-live="polite"></div>
@@ -103,15 +113,16 @@
 
     <section id="work" class="section-shell project-section">
       <div class="section-heading centered">
-        <p class="eyebrow">Portfolio Direction</p>
+        <p class="eyebrow">// Portfolio Direction</p>
         <h2 data-setting="work_title">I use this portfolio as a starting point for visible growth.</h2>
         <p data-setting="work_intro">
           This portfolio highlights my background, practical experience, education, and certifications as I continue growing toward a professional IT career.
         </p>
       </div>
 
-      <div class="project-panel">
+      <div class="project-panel interactive-card" data-tilt-card>
         <div class="project-terminal" aria-label="Developer profile mockup">
+          <div class="terminal-label">mikhail@portfolio:~$ cat profile.json</div>
           <div class="terminal-top"><span></span><span></span><span></span></div>
           <pre><code>const profile = {
   name: "Mikhail Daffa Herdiansah",
@@ -139,7 +150,7 @@
 
     <section class="section-shell stack-section">
       <div class="section-heading">
-        <p class="eyebrow">Tech Direction</p>
+        <p class="eyebrow">// Tech Direction</p>
         <h2 data-setting="tech_title">Tools and topics I am growing into.</h2>
       </div>
       <div class="tag-cloud" id="tech-list" aria-label="Technology interests" aria-live="polite"></div>
@@ -148,7 +159,7 @@
 
     <section id="experience" class="section-shell dynamic-section">
       <div class="section-heading centered">
-        <p class="eyebrow">Experience</p>
+        <p class="eyebrow">// Experience</p>
         <h2 data-setting="experience_title">Experience</h2>
         <p data-setting="experience_intro">Work, internship, and part-time experiences that shaped my practical understanding of software, IT support, and event technology operations.</p>
       </div>
@@ -157,7 +168,7 @@
 
     <section id="education" class="section-shell dynamic-section">
       <div class="section-heading centered">
-        <p class="eyebrow">Education</p>
+        <p class="eyebrow">// Education</p>
         <h2 data-setting="education_title">Education</h2>
         <p data-setting="education_intro">Formal education history, academic activities, and practical learning background.</p>
       </div>
@@ -166,7 +177,7 @@
 
     <section id="certifications" class="section-shell dynamic-section">
       <div class="section-heading centered">
-        <p class="eyebrow">Licenses & Certifications</p>
+        <p class="eyebrow">// Licenses & Certifications</p>
         <h2 data-setting="certification_title">Licenses & Certifications</h2>
         <p data-setting="certification_intro">Selected certifications and course credentials that support my IT learning journey.</p>
       </div>
@@ -176,7 +187,7 @@
 
     <section id="contact" class="section-shell contact-section">
       <div class="contact-card">
-        <p class="eyebrow">Contact</p>
+        <p class="eyebrow">// Contact</p>
         <h2 data-setting="contact_title">Let's connect and build from here.</h2>
         <p data-setting="contact_body">
           I am open to learning opportunities, portfolio feedback, IT discussions, and collaboration around web development and software engineering.
@@ -194,8 +205,9 @@
   <footer class="site-footer">
     <span>© <span id="year"></span> Mikhail Daffa Herdiansah</span>
     <span data-setting="footer_tagline">Full-Stack Developer Enthusiast · IT Student</span>
+    <span class="footer-signal">system: portfolio-ready</span>
   </footer>
 
-  <script src="script.js?v=20260702-tech-ui"></script>
+  <script src="script.js?v=20260703-terminal-ui"></script>
 </body>
 </html>
